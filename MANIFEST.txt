@@ -1,0 +1,176 @@
+MONSTER F3 P1 DEEPSEEK REVIEW PACKAGE
+CreatedLocal=2026-11-13T22:58:26.1904899+01:00
+Project=C:\Users\home\MONSTER-AI-COMMAND-CENTER\frontend
+Backup=C:\Users\home\MONSTER-AI-BACKUPS\MONSTER-F3-P1-BACKUP-20261113-223341-900
+Branch=feature/f3-p1-task-identity-queue-policy
+HEAD=44df00b2196dff2dd5da5f04b9210bc2508d948e
+P1_APPLY_RESULT=P1_STATUS_PASS
+DIFF_BASE=PRE_P1_BACKUP_FRONTEND_SNAPSHOT
+PROJECT_SOURCE_MODIFIED_BY_THIS_PACKAGER=FALSE
+GIT_INDEX_OR_WORKTREE_MODIFIED_BY_THIS_PACKAGER=FALSE
+DATABASE_OR_SERVICES_MODIFIED_BY_THIS_PACKAGER=FALSE
+SECRETS_INCLUDED=FALSE (explicit source allowlist only; no .env, credentials, database dumps, or keys)
+
+PRIMARY P1 FILES:
+lib/agents/runtime.ts | BASELINE_SHA256=241394FE1F4BE6484F6E1C6435038EF6EC190268150D57BEAA5D43BD2C538905 | CURRENT_SHA256=270D0A2B1B4097B6D7B78058D28937C9A972D0A54B6323A146B00D1E2BF34BD9
+lib/ai/tool-executor.ts | BASELINE_SHA256=3ECD5935EECF6877F74DE8184EBEF8A9582ED37D1ADB7D5F56CF436DF0099B83 | CURRENT_SHA256=B74E6D01AE70DAFBDBC035E19FEA2729BE7D05AAD01E944042C52B7577F99C98
+lib/ai/tool-policy.ts | BASELINE_SHA256=E1BB7534DCFCE6254475ED99D089C856C2BDE2EDEB847EBB86FFCF87AD8545A8 | CURRENT_SHA256=EA1DC5CA72D9914D29FB8395314730C78658F60D3111FDF379EF5903B7A31758
+lib/tasks/queue.ts | BASELINE_SHA256=F17E658FC0ED67DED41284CB565136C5F3ECFF05FA202BA16C26CC18C5FA9E6B | CURRENT_SHA256=B7C2CC456DFF7D822B970F2A1E0108BC71A5258BA63068B7460A21000A36FF0D
+scripts/task-worker.ts | BASELINE_SHA256=3D04FB1CD4302B660D26DE0DE03F7BDFDED0F26A75688DE1B619E21AB46D1C1C | CURRENT_SHA256=7711140DEE141CF8FD6F79B975B9F854105C8AFC1014A1E6AB5AE49F7AAC6D27
+scripts/test-cross-tool-side-effect-identity.ts | BASELINE_SHA256=31C4CEB6BA1AD47127D21E1B120EAE066222B51A1C8809460C07E143F965C118 | CURRENT_SHA256=621C71106966FED5E2FDD15665760CFA9671ECEDE005770AF287C47E42052F4D
+scripts/test-researcher-web-search.ts | BASELINE_SHA256=F49A30272B405B018F28DA82B37CC4DDD423297A021F0C59D55F2BFA1C010FD1 | CURRENT_SHA256=86DA1A370A387B37374637781A53540D2F6E82A8FF84322093CBD68E9DA11B49
+NEW_FILE scripts/test-f3-p1.ts | CURRENT_SHA256=6467AF5E127A5D81F59D859EB25F2629E0D57200E9061777B231BB93118FC7B0 | ABSENT_FROM_PRE_P1_BACKUP=TRUE
+
+SUPPORTING CONTEXT FILES (expected unchanged by P1):
+lib/workspace/tools.ts | SHA256=6EB9BF0CB9F571A9952577EE3977FBE40A3C9A3541F6DC487FB252B2CF3272A4 | UNCHANGED_FROM_PRE_P1=TRUE
+lib/memory/store.ts | SHA256=28BE63945F6C95ACB89720FB43AB519ED9D64214B8DEA39837CDE9F57F534ADA | UNCHANGED_FROM_PRE_P1=TRUE
+scripts/test-worker-lease-recovery-guard.ts | SHA256=CB60C1D0574318D2466BB3D4C5DFC62645648E4B8BABB2DC10C57A643F538802 | UNCHANGED_FROM_PRE_P1=TRUE
+scripts/test-worker-retry-guard.ts | SHA256=C4AFBD05B4059E6F8FA65F58C8C816D2E57974BADE1DAF1D8BF285E0609ED815 | UNCHANGED_FROM_PRE_P1=TRUE
+scripts/test-retry-policy.ts | SHA256=4BC2E4829A0BCE11D237EB49702759BCC48C8FBF0C52698D99F73EC12A14E149 | UNCHANGED_FROM_PRE_P1=TRUE
+scripts/test-workspace-replay.ts | SHA256=28D4B9431E27095AA7C8C99136CC97D49319A34EAF12BD78E9C918D35340138B | UNCHANGED_FROM_PRE_P1=TRUE
+scripts/test-workspace-replay-post-effect-crash.ts | SHA256=FE40289A74AB244EDA0DE88C0670EE57B0226A1EEE657C84CEBFDAFA18093AB0 | UNCHANGED_FROM_PRE_P1=TRUE
+
+GIT STATE SNAPSHOT (diagnostic only; includes pre-existing worktree changes):
+MM .gitignore
+AM app/api/agents/route.ts
+AM app/api/agents/run/route.ts
+AM app/api/ai/chat/route.ts
+M  app/api/weather/route.ts
+ M app/page.tsx
+ M components/ApexHeroOrb.tsx
+M  components/ApexOverviewPanel.tsx
+ M components/ApexWorld.tsx
+AM compose.yaml
+A  db/init/001_initial_schema.sql
+A  lib/agents/registry.ts
+AM lib/agents/runtime.ts
+AM lib/ai/models.ts
+AM lib/ai/omniroute.ts
+AM lib/ai/tool-executor.ts
+A  lib/db/postgres.ts
+AM lib/memory/store.ts
+AM lib/tasks/orchestrator.ts
+AM lib/tasks/queue.ts
+AM lib/workspace/tools.ts
+M  package-lock.json
+M  package.json
+A  scripts/monster-memory-postgres-smoke.cjs
+AM scripts/orchestrator-plan.ts
+A  scripts/orchestrator-status.ts
+A  scripts/task-add.ts
+A  scripts/task-cancel.ts
+A  scripts/task-status.ts
+AM scripts/task-worker.ts
+?? app/api/auth/login/route.ts
+?? app/api/auth/logout/route.ts
+?? app/api/auth/session/route.ts
+?? app/api/orchestrator/[planId]/route.ts
+?? app/api/orchestrator/route.ts
+?? app/api/tasks/[taskId]/route.ts
+?? app/api/tasks/route.ts
+?? app/api/tasks/voice/route.ts
+?? app/login/page.tsx
+?? components/LoginForm.tsx
+?? components/LogoutButton.tsx
+?? components/TaskConsole.tsx
+?? components/useApexLiveVoice.ts
+?? db/migrations/002_api_security.sql
+?? lib/ai/omniroute.ts.pre-quota-fix-20261103-174458.bak
+?? lib/ai/tool-executor.ts.backup-tool-executor-v2-20261106-201636-b69c96102fee4bb6b3ef1c921f5ee2fe
+?? lib/ai/tool-executor.ts.backup-tool-executor-v2-20261106-201834-529611fa24bd4989bc3b3dd323f07c95
+?? lib/ai/tool-executor.ts.backup-tool-executor-v2.2-20261106-202412-800305d0dbe94c0b8eee28a5e26119fe
+?? lib/ai/tool-policy.ts
+?? lib/security/auth.ts
+?? lib/security/guards.ts
+?? lib/security/rate-limit.ts
+?? lib/tasks/app_api_tasks_voice_route.ts
+?? lib/tasks/lease-recovery.ts
+?? lib/tasks/orchestrator.ts.pre-quota-fix-20261103-174458.bak
+?? lib/tasks/retry-policy.ts
+?? scripts/monster-auth-smoke.ts
+?? scripts/setup-monster-auth.ts
+?? scripts/setup-monster-db.ps1
+?? scripts/task-worker.ts.before-fencing-20261101-213859.bak
+?? scripts/task-worker.ts.pre-quota-fix-20261103-174458.bak
+?? scripts/test-agent-governance.ts
+?? scripts/test-cross-tool-side-effect-identity.ts
+?? scripts/test-f3-p1.ts
+?? scripts/test-researcher-web-search.ts
+?? scripts/test-retry-policy.ts
+?? scripts/test-worker-lease-recovery-guard.ts
+?? scripts/test-worker-retry-guard.ts
+?? scripts/test-workspace-replay-post-effect-crash.ts
+?? scripts/test-workspace-replay.ts
+
+UNSTAGED_DIFF_STAT_VS_HEAD (NOT P1-ONLY):
+warning: in the working copy of 'app/page.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/api/ai/chat/route.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'compose.yaml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/agents/runtime.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/ai/models.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/ai/tool-executor.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/memory/store.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/tasks/queue.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/workspace/tools.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/orchestrator-plan.ts', LF will be replaced by CRLF the next time Git touches it
+ .gitignore                                |    4 +
+ app/api/agents/route.ts                   |  216 +++++
+ app/api/agents/run/route.ts               |  156 ++++
+ app/api/ai/chat/route.ts                  |  209 +++++
+ app/api/weather/route.ts                  |   92 ++-
+ app/page.tsx                              |   23 +-
+ components/ApexHeroOrb.tsx                |    2 +-
+ components/ApexOverviewPanel.tsx          |  124 ++-
+ components/ApexWorld.tsx                  |  158 +++-
+ compose.yaml                              |   31 +
+ db/init/001_initial_schema.sql            |  161 ++++
+ lib/agents/registry.ts                    |   43 +
+ lib/agents/runtime.ts                     |  363 +++++++++
+ lib/ai/models.ts                          |   50 ++
+ lib/ai/omniroute.ts                       |  166 ++++
+ lib/ai/tool-executor.ts                   | 1239 +++++++++++++++++++++++++++++
+ lib/db/postgres.ts                        |   49 ++
+ lib/memory/store.ts                       |  414 ++++++++++
+ lib/tasks/orchestrator.ts                 |  402 ++++++++++
+ lib/tasks/queue.ts                        |  280 +++++++
+ lib/workspace/tools.ts                    |  591 ++++++++++++++
+ package-lock.json                         |  679 ++++++++++++++++
+ package.json                              |   75 +-
+ scripts/monster-memory-postgres-smoke.cjs |   93 +++
+ scripts/orchestrator-plan.ts              |  116 +++
+ scripts/orchestrator-status.ts            |   66 ++
+ scripts/task-add.ts                       |   63 ++
+ scripts/task-cancel.ts                    |   26 +
+ scripts/task-status.ts                    |   26 +
+ scripts/task-worker.ts                    | 1159 +++++++++++++++++++++++++++
+ 30 files changed, 6964 insertions(+), 112 deletions(-)
+
+STAGED_DIFF_STAT_VS_HEAD (NOT P1-ONLY):
+ .gitignore                                |   3 +
+ app/api/agents/route.ts                   |  29 ++
+ app/api/agents/run/route.ts               | 102 +++++
+ app/api/ai/chat/route.ts                  | 212 ++++++++++
+ app/api/weather/route.ts                  |  92 ++--
+ components/ApexOverviewPanel.tsx          | 124 +++++-
+ compose.yaml                              |  30 ++
+ db/init/001_initial_schema.sql            | 161 +++++++
+ lib/agents/registry.ts                    |  43 ++
+ lib/agents/runtime.ts                     | 302 +++++++++++++
+ lib/ai/models.ts                          |  30 ++
+ lib/ai/omniroute.ts                       |  75 ++++
+ lib/ai/tool-executor.ts                   | 397 +++++++++++++++++
+ lib/db/postgres.ts                        |  49 +++
+ lib/memory/store.ts                       | 304 +++++++++++++
+ lib/tasks/orchestrator.ts                 | 339 +++++++++++++++
+ lib/tasks/queue.ts                        | 282 +++++++++++++
+ lib/workspace/tools.ts                    | 331 +++++++++++++++
+ package-lock.json                         | 679 ++++++++++++++++++++++++++++++
+ package.json                              |  75 ++--
+ scripts/monster-memory-postgres-smoke.cjs |  93 ++++
+ scripts/orchestrator-plan.ts              | 116 +++++
+ scripts/orchestrator-status.ts            |  66 +++
+ scripts/task-add.ts                       |  63 +++
+ scripts/task-cancel.ts                    |  26 ++
+ scripts/task-status.ts                    |  26 ++
+ scripts/task-worker.ts                    | 629 +++++++++++++++++++++++++++
+ 27 files changed, 4594 insertions(+), 84 deletions(-)

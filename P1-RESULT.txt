@@ -1,0 +1,10 @@
+P1_STATUS=PASS
+Branch=feature/f3-p1-task-identity-queue-policy
+BaseBranch=security/patch-dependencies
+BaseHEAD=44df00b2196dff2dd5da5f04b9210bc2508d948e
+Backup=C:\Users\home\MONSTER-AI-BACKUPS\MONSTER-F3-P1-BACKUP-20261113-223341-900
+Files=lib/agents/runtime.ts;lib/ai/tool-executor.ts;lib/ai/tool-policy.ts;lib/tasks/queue.ts;scripts/task-worker.ts;scripts/test-cross-tool-side-effect-identity.ts;scripts/test-researcher-web-search.ts;scripts/test-f3-p1.ts
+CommitCreated=FALSE
+DatabaseChanged=FALSE
+OmniRouteChanged=FALSE
+WorkerRestartRequired=TRUE_AFTER_APPLY
